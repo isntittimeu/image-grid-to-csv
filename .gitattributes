@@ -1,0 +1,20 @@
+# Normalise line endings across platforms.
+# Default: let git handle text files automatically.
+* text=auto
+
+# Shell script MUST use LF or it won't run on macOS/Linux.
+*.sh text eol=lf
+
+# Windows batch file should keep CRLF.
+*.bat text eol=crlf
+
+# Python / text sources: normalise to LF in the repo.
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+
+# Treat images as binary (never line-ending converted).
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
